@@ -19,7 +19,7 @@ router.post("/news", async(req,res)=>{
 router.get("/news", async(req,res)=>{
 
    try{
-       const newsData= await News.find();
+       const newsData= await News.find().sort({_id:-1});
        res.status(200).send(newsData);
    }catch(e){
        res.status(500).send(e);
