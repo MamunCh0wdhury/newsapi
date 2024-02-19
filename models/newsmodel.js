@@ -12,7 +12,10 @@ const newsSchema = new mongoose.Schema({
         type : String,
         required : true,
     }
-})
+},
+{timestamps:true}
+);
+
 
 const News= new mongoose.model('News',newsSchema);
 module.exports=News;
