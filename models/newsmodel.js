@@ -11,7 +11,11 @@ const newsSchema = new mongoose.Schema({
     urlLink:{
         type : String,
         required : true,
-    }
+    },
+    thumbNailUrl:{
+        type : String,
+        required : true,
+    },
 },
 {timestamps:true}
 );
