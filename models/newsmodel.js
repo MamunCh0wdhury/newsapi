@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-var timeAgo = require('node-time-ago');
+
 
 const newsSchema = new mongoose.Schema({
 
@@ -18,7 +18,7 @@ const newsSchema = new mongoose.Schema({
         required : true,
     },
 },
-{timestamps:timeAgo(Date().now())}
+{timestamps:true}
 );
 
 
