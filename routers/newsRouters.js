@@ -9,7 +9,7 @@ var moment = require('moment');
 router.post("/news", async(req,res)=>{
     try{
        const user= new News(req.body);
-       user.moment().startOf('second').fromNow();   
+       moment().startOf('second').fromNow();   
        const createUpload= await user.save();
        res.status(201).send(createUpload);
     }catch(e){ res.status(400).send(e)}
