@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-var moment = require('moment'); 
+
 
 const newsSchema = new mongoose.Schema({
 
@@ -18,7 +18,9 @@ const newsSchema = new mongoose.Schema({
         required : true,
     },
 },
-{ timestamps:moment().format()}
+{ timestamps:true,
+
+}
 );
 
 

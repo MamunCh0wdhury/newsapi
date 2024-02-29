@@ -2,13 +2,14 @@ const express = require("express");
 const News = require("../models/newsmodel");
 const { model } = require("mongoose");
 const router = new express.Router(); 
-
+var moment = require('moment'); 
 
 // Post Request using async and wait
 
 router.post("/news", async(req,res)=>{
     try{
        const user= new News(req.body);
+       user.moment().startOf('second').fromNow();   
        const createUpload= await user.save();
        res.status(201).send(createUpload);
     }catch(e){ res.status(400).send(e)}
