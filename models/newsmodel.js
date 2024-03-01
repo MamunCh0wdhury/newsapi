@@ -17,10 +17,6 @@ const newsSchema = new mongoose.Schema({
         type : String,
         required : true,
     },
-    uploadTime:{
-        type:Date,
-        required:true
-    }
 },
 { timestamps:true,}
 );
