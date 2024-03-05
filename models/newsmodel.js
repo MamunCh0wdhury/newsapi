@@ -18,6 +18,9 @@ const newsSchema = new mongoose.Schema({
         type : String,
         required : true,
     },
+    subTitle:{
+        type:String,
+    },
     timestamps: {
         type: Date,
         default: Date.now
